@@ -4,10 +4,21 @@
 
 This project implements a star-schema-based **data warehouse** for analyzing Formula 1 race and sprint results. It features structured ETL pipelines, a layered architecture (Bronze → Silver → Gold), and optimized SQL views for efficient analytics.
 
+## 📐 Architecture Overview
 
-
+The architecture follows a **layered data warehouse design**:
+- **Bronze Layer**: Raw data is injested as it is from sources.
+- **Silver Layer**: Transformed, cleaned, and normalized data.
+- **Gold Layer**: Analytical-ready star schema containing dimension and fact views.
 
 ---
+
+### Prerequisites
+
+* Python 3.x
+* SQL Server Express
+* SQL Server Management Studio (SSMS)
+* VS CODE
 
 ## 🏗️ Layered Architecture
 
@@ -43,7 +54,7 @@ Ready-for-analysis views based on fact-dimension modeling.
   - `dim_constructors`
   - `dim_circuits`
   - `dim_races`
-
+    
 **Transformations**:
 - Joins, aggregations, derived fields
 - Business logic for analytics
@@ -66,6 +77,7 @@ Ready-for-analysis views based on fact-dimension modeling.
 | SQLAlchemy       | Load transformed data to SQL   |
 | SQL Server       | Star schema modeling & queries |
 | Power BI, Looker | Data visualization             |
+| VS CODE          | Code editor                    | 
 
 
 ## 📊 Visualization
@@ -77,5 +89,5 @@ Ready-for-analysis views based on fact-dimension modeling.
 Example dashboard: Points by Driver, Race Performance by Country, Sprint vs Race Stats
 
 🧾 License
-Licensed under the MIT License.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
